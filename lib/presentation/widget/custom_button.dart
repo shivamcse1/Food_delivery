@@ -13,6 +13,7 @@ class CustomElevatedButton extends StatelessWidget {
   final Color? buttonColor;
   final TextStyle? buttonTextStyle ;
   final bool? isTextFieldEmpty;
+  final EdgeInsetsGeometry? margin;
 
    
   const CustomElevatedButton({
@@ -24,13 +25,14 @@ class CustomElevatedButton extends StatelessWidget {
     this.radius, 
     this.buttonColor, 
     this.buttonTextStyle, 
-    this.isTextFieldEmpty = true
+    this.isTextFieldEmpty = true,
+    this.margin
     });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-              margin:  EdgeInsets.symmetric(horizontal: 16.h),
+              margin: margin,
               height: height!.h,
               width: width!.w,
               child: ElevatedButton(
@@ -48,7 +50,7 @@ class CustomElevatedButton extends StatelessWidget {
                 style: isTextFieldEmpty ==true
                       ? buttonTextStyle ?? AppStyle.nunito16green6w700h1_4
                       : AppStyle.nunito16whitew700h1_4
-                      )),
+            )),
      );
   }
 }

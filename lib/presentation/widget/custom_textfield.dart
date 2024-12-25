@@ -7,6 +7,8 @@ import '../../core/theme/app_style.dart';
 
 class CustomTextField extends StatelessWidget {
   final bool? focus ;
+  final bool? readOnly ;
+  final TextAlign? contentAlign;
   final double? height;
   final double? width;
   final String? labelText;
@@ -14,6 +16,7 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffix;
   final double? radius;
   final Color? enableBorderColor;
+  final Color? backGroundColor;
   final Color? focusBorderColor;
   final TextStyle? labelStyle;
   final TextStyle? contentStyle;
@@ -21,6 +24,7 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
+  // final EdgeInsetsGeometry? contentPadding;
   final int? maxDigitLength ;
   final Function(String)? onChanged;
 
@@ -41,9 +45,13 @@ class CustomTextField extends StatelessWidget {
       this.margin, 
       this.padding, 
       this.focus, 
-      this.maxDigitLength = 10, 
+      this.maxDigitLength, 
       this.onChanged, 
-      this.contentStyle
+      this.contentStyle, 
+      // this.contentPadding, 
+      this.readOnly, 
+      this.contentAlign, 
+      this.backGroundColor 
       });
 
   @override
@@ -54,6 +62,9 @@ class CustomTextField extends StatelessWidget {
             height: height!.h,
             width: width!.w,
             child: TextField(
+            textAlignVertical: TextAlignVertical.center,
+            textAlign: contentAlign ?? TextAlign.start,
+            readOnly: readOnly ?? false,
             style: contentStyle ?? AppStyle.nunito16darkw500h1_4,
             onChanged: onChanged,
             inputFormatters: [LengthLimitingTextInputFormatter(maxDigitLength)],
@@ -61,10 +72,11 @@ class CustomTextField extends StatelessWidget {
             keyboardType: keyboardType,  
             controller: controller,
             decoration: InputDecoration(
-            
+              contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 10) ,
+              filled: true, 
+              fillColor: backGroundColor ?? AppColors.white,
               suffix: suffix ,
               prefix: prefix ,
-              
               label: Text(labelText ??'',
                style: AppStyle.small.copyWith(color: AppColors.green2),),
               enabledBorder: OutlineInputBorder(

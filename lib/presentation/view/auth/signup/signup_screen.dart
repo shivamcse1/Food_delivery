@@ -76,6 +76,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                   
                CustomElevatedButton
                (
+                margin: EdgeInsets.symmetric(horizontal: 16.w),
                 buttonText: "Confirm Login", 
                 onTap: (){
                 },

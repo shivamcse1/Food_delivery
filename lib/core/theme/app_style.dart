@@ -114,6 +114,14 @@ class AppStyle{
     height: 1.4,
   );
 
+  static TextStyle get nunito12blackGrey3w700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 12.sp,
+    color: AppColors.blackGrey3,
+    fontWeight: FontWeight.w700,
+    height: 1.4,
+  );
+
   static TextStyle get nunito14green1w400h1_4 => TextStyle(
     fontFamily: AppConstant.appFontFamily,
     fontSize: 14.sp,
@@ -130,10 +138,43 @@ class AppStyle{
         fontWeight: FontWeight.w500,
         height: 1.4,
   );
+
+  static TextStyle get nunito16blackgrey3w500h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 16.sp,
+        color: AppColors.blackGrey3,
+        fontStyle: FontStyle.normal,
+        fontWeight: FontWeight.w500,
+        height: 1.4,
+  );
   static TextStyle get nunito16green1w700h1_4 =>TextStyle(
         fontFamily: AppConstant.appFontFamily,
         fontSize: 16.sp,
         color: AppColors.green1,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
+
+  static TextStyle get nunito16green2w700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 16.sp,
+        color: AppColors.green2,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
+
+  static TextStyle get nunito16darkw700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 16.sp,
+        color: AppColors.dark,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
+
+  static TextStyle get nunito16blackGrey3w700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 16.sp,
+        color: AppColors.blackGrey3,
         fontWeight: FontWeight.w700,
         height: 1.4,
   );
@@ -150,6 +191,14 @@ class AppStyle{
         fontFamily: AppConstant.appFontFamily,
         fontSize: 16.sp,
         color: AppColors.white,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
+
+  static TextStyle get nunito20darkw700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 20.sp,
+        color: AppColors.dark,
         fontWeight: FontWeight.w700,
         height: 1.4,
   );
