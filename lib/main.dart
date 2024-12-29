@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery/core/routes/app_routes.dart';
 import 'package:food_delivery/core/theme/app_colors.dart';
-import 'package:food_delivery/presentation/view/auth/succes_registration/success_registration_screen.dart';
-import 'package:food_delivery/presentation/widget/custom_app_bar.dart';
+import 'package:food_delivery/presentation/view/home/category/category_screen.dart';
 import 'package:get/get.dart';
 
-import 'presentation/view/home/home_screen.dart';
-
 void main() {
+  // debugPaintSizeEnabled = true;
   runApp(const MyApp());
 }
 
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
           primarySwatch:Colors.green,
           useMaterial3: true,
         ),
-        home: const HomeScreen()
+        home: const CategoryScreen()
       ),
     );
   }

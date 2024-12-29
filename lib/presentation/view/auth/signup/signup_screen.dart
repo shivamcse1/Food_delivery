@@ -68,6 +68,8 @@ class SignUpScreenState extends State<SignUpScreen> {
                 labelText: "Enter phone number",
                 labelStyle: AppStyle.nunito12green2w500h1_4,
                 prefix: Text("+91 ",style: AppStyle.nunito16darkw500h1_4,),
+                enableBorderColor: AppColors.green2,
+                focusBorderColor: AppColors.green2,
                ),
 
                 SizedBox(

@@ -49,7 +49,7 @@ class SuccessRegistrationScreenState extends State<SuccessRegistrationScreen> {
                     margin: EdgeInsets.symmetric(horizontal: 50.w),
                     height: 285,
                     child: const Image(
-                      image: AssetImage(ImageConstant.deliveryBoy),
+                      image: AssetImage(ImageConstant.deliveryBoyImg),
                       height: 285,
                       width: 276,
                       )),

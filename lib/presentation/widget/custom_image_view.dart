@@ -37,6 +37,6 @@ class CustomImageView extends StatelessWidget {
                 fit: BoxFit.contain,
                 )
 
-              : Image.asset(ImageConstant.deliveryBoy);  
+              : Image.asset(ImageConstant.deliveryBoyImg);  
   }
 }

@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
   final double? height;
   final double? width;
   final String? labelText;
+  final String? hintText;
   final Widget? prefix;
   final Widget? suffix;
   final double? radius;
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   final Color? backGroundColor;
   final Color? focusBorderColor;
   final TextStyle? labelStyle;
+  final TextStyle? hintStyle;
   final TextStyle? contentStyle;
   final TextEditingController ? controller;
   final TextInputType? keyboardType;
@@ -51,7 +53,9 @@ class CustomTextField extends StatelessWidget {
       // this.contentPadding, 
       this.readOnly, 
       this.contentAlign, 
-      this.backGroundColor 
+      this.backGroundColor, 
+      this.hintText, 
+      this.hintStyle 
       });
 
   @override
@@ -68,25 +72,27 @@ class CustomTextField extends StatelessWidget {
             style: contentStyle ?? AppStyle.nunito16darkw500h1_4,
             onChanged: onChanged,
             inputFormatters: [LengthLimitingTextInputFormatter(maxDigitLength)],
-            autofocus: focus ?? true,
+            autofocus: focus ?? false,
             keyboardType: keyboardType,  
             controller: controller,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 10) ,
+              hintStyle: hintStyle,
+              hintText: hintText,
+              contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10) ,
               filled: true, 
               fillColor: backGroundColor ?? AppColors.white,
-              suffix: suffix ,
-              prefix: prefix ,
-              label: Text(labelText ??'',
-               style: AppStyle.small.copyWith(color: AppColors.green2),),
+              suffixIcon: suffix ,
+              prefixIcon: prefix,
+              labelText:labelText,
+              labelStyle: labelStyle ?? AppStyle.small.copyWith(color: AppColors.green2) ,
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: enableBorderColor ?? AppColors.green2),
+                borderSide: BorderSide(color: enableBorderColor ?? Colors.transparent),
                 borderRadius: BorderRadius.circular(radius ?? 16.r)
               ),
-            
+              
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular( radius?? 16.r),
-                borderSide: BorderSide(color: focusBorderColor ?? AppColors.green2,)
+                borderSide: BorderSide(color: focusBorderColor ?? Colors.transparent)
               ),
             ),
             ),
