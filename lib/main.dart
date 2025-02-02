@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'food delivery',
-        // initialRoute: '/',
+        initialRoute: '/',
         getPages: AppRoutes.allPages,
         theme: ThemeData(
           bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           primarySwatch:Colors.green,
           useMaterial3: true,
         ),
-        home: const CategoryScreen()
+        // home: const CategoryScreen()
       ),
     );
   }

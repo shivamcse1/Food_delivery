@@ -15,7 +15,9 @@ class CustomCircleImage extends StatelessWidget {
   final BoxFit?  imageFit ;
   final double? imageHeight;
   final double? imageWidth;
+  final IconData ? icon;
   final EdgeInsetsGeometry ? padding;
+  final EdgeInsetsGeometry ? margin;
 
    CustomCircleImage({
     super.key, 
@@ -28,6 +30,8 @@ class CustomCircleImage extends StatelessWidget {
     this.imageFit = BoxFit.contain, 
     this.imageHeight, 
     this.imageWidth, 
+    this.icon, 
+    this.margin, 
   
     });
 
@@ -38,6 +42,7 @@ class CustomCircleImage extends StatelessWidget {
 
     return Container(
       padding: padding ??  EdgeInsets.symmetric(vertical: 6.h,horizontal: 8.w),
+      margin: margin,
       height: radius.r,
       width: radius.r,
       decoration: BoxDecoration(
@@ -46,7 +51,16 @@ class CustomCircleImage extends StatelessWidget {
         image:  backGroundImage!=null ? DecorationImage(image: AssetImage(backGroundImage!))
                 : null
       ),
-      child: ( image!= null && 
+      child: icon != null 
+             ? Center(
+               child: Icon(
+                 icon,
+                 color: imageColor,
+                 size: imageHeight,
+                ),
+             )
+      
+            : ( image!= null && 
              (image!.endsWith(".jpg") ||
              image!.endsWith(".png") || 
              image!.endsWith(".jpeg") ||
@@ -54,9 +68,6 @@ class CustomCircleImage extends StatelessWidget {
              ) 
             ? Image.asset(image!,
               color: imageColor,
-              fit:  imageFit ,
-              height: imageHeight,
-              width: imageWidth,
               errorBuilder: ((context, error, stackTrace) {
                 return Image.asset(ImageConstant.previewIcon,
                 );
@@ -64,15 +75,16 @@ class CustomCircleImage extends StatelessWidget {
               )
             : image == null 
               ? null
-              : SvgPicture.asset(image!,
-               // ignore: deprecated_member_use
+              :SvgPicture.asset(image!,
+               height: imageHeight,
+               width: imageWidth ,               
                color: imageColor,
-               fit: BoxFit.contain,
+               fit: (imageHeight !=null || imageWidth !=null ) ? BoxFit.none : imageFit!,
                 placeholderBuilder: ((context) {
                 return Image.asset(ImageConstant.previewIcon,
                 );
               }),
-              ),
+          ),
     );
   }
 }

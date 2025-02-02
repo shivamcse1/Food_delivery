@@ -6,49 +6,26 @@ import 'package:food_delivery/presentation/view/auth/succes_registration/success
 import 'package:food_delivery/presentation/view/bottom_nav_bar/bottom_nav_bar_screen.dart';
 import 'package:get/get.dart';
 
-class AppRoutes{
+import '../../presentation/view/profile/personal_data/profile_screen.dart';
 
- static const String bottomNavBarScreen = '/';
- static const String otpScreen = '/otpScreen';
- static const String createPasswordScreen = '/createPasswordScreen';
- static const String signUpScreen = '/signUpScreen';
- static const String personalDataScreen = '/personalDataScreen';
- static const String successRegistrationScreen = '/successRegistrationScreen';
-  
+class AppRoutes {
+  static const String bottomNavBarScreen = '/';
+  static const String otpScreen = '/otpScreen';
+  static const String createPasswordScreen = '/createPasswordScreen';
+  static const String signUpScreen = '/signUpScreen';
+  static const String profileScreen = '/profileScreen';
+  static const String personalDataScreen = '/personalDataScreen';
+  static const String successRegistrationScreen = '/successRegistrationScreen';
 
- 
- static List<GetPage<dynamic>>? allPages = [
- 
-  GetPage(
-      name: '/', 
-      page: ()=> const BottomNavBarScreen() 
-    ),
-
-  GetPage(
-    name: otpScreen, 
-    page: ()=> const OtpScreen()
-    ),  
-
-  GetPage(
-    name: createPasswordScreen, 
-    page: ()=> const CreatePasswordScreen()
-    ),  
-
-  GetPage(
-    name: successRegistrationScreen, 
-    page: ()=> const SuccessRegistrationScreen()
-    ), 
-
-  GetPage(
-    name: signUpScreen, 
-    page: ()=> const SignUpScreen()
-    ),  
-
-  GetPage(
-    name: personalDataScreen, 
-    page: ()=> const PersonalDataScreen()
-    ),  
-
- ];
-
+  static List<GetPage<dynamic>>? allPages = [
+    GetPage(name: '/', page: () => const BottomNavBarScreen()),
+    GetPage(name: otpScreen, page: () => const OtpScreen()),
+    GetPage(
+        name: createPasswordScreen, page: () => const CreatePasswordScreen()),
+    GetPage(
+        name: successRegistrationScreen,
+        page: () => const SuccessRegistrationScreen()),
+    GetPage(name: signUpScreen, page: () => const SignUpScreen()),
+    GetPage(name: profileScreen, page: () => const ProfileScreen()),
+  ];
 }

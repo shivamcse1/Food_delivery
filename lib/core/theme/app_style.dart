@@ -90,11 +90,27 @@ class AppStyle{
     height: 1.4,
   );
 
+  static TextStyle get nunito12darkw500h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 12.sp,
+    color: AppColors.dark,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+
   static TextStyle get nunito12green2w500h1_4 => TextStyle(
     fontFamily: AppConstant.appFontFamily,
     fontSize: 12.sp,
     color: AppColors.green2,
     fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito12green2w700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 12.sp,
+    color: AppColors.green2,
+    fontWeight: FontWeight.w700,
     height: 1.4,
   );
 
@@ -121,6 +137,13 @@ class AppStyle{
     fontWeight: FontWeight.w700,
     height: 1.4,
   );
+  static TextStyle get nunito12whitew700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 12.sp,
+    color: AppColors.white,
+    fontWeight: FontWeight.w700,
+    height: 1.4,
+  );
 
   static TextStyle get nunito12blackGrey3w700h1_4 => TextStyle(
     fontFamily: AppConstant.appFontFamily,
@@ -130,11 +153,91 @@ class AppStyle{
     height: 1.4,
   );
 
+  static TextStyle get nunito12blackGrey4w700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 12.sp,
+    color: AppColors.blackGrey4,
+    fontWeight: FontWeight.w700,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito12blackGrey3w500h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 12.sp,
+    color: AppColors.blackGrey3,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+
   static TextStyle get nunito14green1w400h1_4 => TextStyle(
     fontFamily: AppConstant.appFontFamily,
     fontSize: 14.sp,
     color: AppColors.green1,
     fontWeight: FontWeight.w400,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14green2w400h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.green2,
+    fontWeight: FontWeight.w400,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14whitew500h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.white,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+  
+  static TextStyle get nunito14green2w500h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.green2,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14blackGrey3w500h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.blackGrey3,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14darkw500h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.dark,
+    fontWeight: FontWeight.w500,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14darkw700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.dark,
+    fontWeight: FontWeight.w700,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14whitew700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.white,
+    fontWeight: FontWeight.w700,
+    height: 1.4,
+  );
+
+  static TextStyle get nunito14blackGrey3w700h1_4 => TextStyle(
+    fontFamily: AppConstant.appFontFamily,
+    fontSize: 14.sp,
+    color: AppColors.blackGrey3,
+    fontWeight: FontWeight.w700,
     height: 1.4,
   );
 
@@ -194,6 +297,13 @@ class AppStyle{
         fontWeight: FontWeight.w700,
         height: 1.4,
   );
+  static TextStyle get nunito16errorw700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 16.sp,
+        color: AppColors.error,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
 
   static TextStyle get nunito16whitew700h1_4 =>TextStyle(
         fontFamily: AppConstant.appFontFamily,
@@ -211,12 +321,36 @@ class AppStyle{
         height: 1.4,
   );
 
+  static TextStyle get nunito20green1w700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 20.sp,
+        color: AppColors.green1,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
+
+  static TextStyle get nunito20green2w700h1_4 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 20.sp,
+        color: AppColors.green2,
+        fontWeight: FontWeight.w700,
+        height: 1.4,
+  );
+
   static TextStyle get nunito20darkw800h1_4 =>TextStyle(
         fontFamily: AppConstant.appFontFamily,
         fontSize: 20.sp,
         color: AppColors.dark,
         fontWeight: FontWeight.w800,
         height: 1.4,
+  );
+
+  static TextStyle get nunito24whitew700h1_2 =>TextStyle(
+        fontFamily: AppConstant.appFontFamily,
+        fontSize: 24.sp,
+        color: AppColors.white,
+        fontWeight: FontWeight.w700,
+        height: 1.2,
   );
 
 
