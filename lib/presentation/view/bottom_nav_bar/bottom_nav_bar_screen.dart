@@ -6,12 +6,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_delivery/core/constant/image_constant.dart';
 import 'package:food_delivery/core/theme/app_colors.dart';
 import 'package:food_delivery/core/theme/app_style.dart';
-import 'package:food_delivery/presentation/view/auth/signup/signup_screen.dart';
-import 'package:food_delivery/presentation/view/auth/succes_registration/success_registration_screen.dart';
 import 'package:food_delivery/presentation/view/home/home_screen.dart';
 
 import '../cart/cart_screen.dart';
-import '../home/details/detail_screen.dart';
 import '../profile/personal_data/profile_screen.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
